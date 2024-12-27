@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if viewModel.userSession != nil {
+                // Menampilkan MainTabView dengan tab menu setelah user login
+                MainTabView()
+            } else {
+                // Menampilkan LoginView saat user belum login
+                LoginView()
+            }
         }
-        .padding()
     }
 }
 

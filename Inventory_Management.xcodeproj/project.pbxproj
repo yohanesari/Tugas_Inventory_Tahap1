@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		891709822D102C1200ED11FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 891709812D102C1200ED11FF /* FirebaseAuth */; };
+		891709842D102C1200ED11FF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 891709832D102C1200ED11FF /* FirebaseFirestore */; };
+		891709862D102C1200ED11FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 891709852D102C1200ED11FF /* FirebaseStorage */; };
+		898139AC2D15637E00B1BF07 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 898139AB2D15637E00B1BF07 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		891EC7132CF5ACFD00D65BEC /* Inventory_Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inventory_Management.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,16 +30,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898139AC2D15637E00B1BF07 /* SDWebImageSwiftUI in Frameworks */,
+				891709822D102C1200ED11FF /* FirebaseAuth in Frameworks */,
+				891709842D102C1200ED11FF /* FirebaseFirestore in Frameworks */,
+				891709862D102C1200ED11FF /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		891709802D102C1200ED11FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		891EC70A2CF5ACFD00D65BEC = {
 			isa = PBXGroup;
 			children = (
 				891EC7152CF5ACFD00D65BEC /* Inventory_Management */,
+				891709802D102C1200ED11FF /* Frameworks */,
 				891EC7142CF5ACFD00D65BEC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +84,10 @@
 			);
 			name = Inventory_Management;
 			packageProductDependencies = (
+				891709812D102C1200ED11FF /* FirebaseAuth */,
+				891709832D102C1200ED11FF /* FirebaseFirestore */,
+				891709852D102C1200ED11FF /* FirebaseStorage */,
+				898139AB2D15637E00B1BF07 /* SDWebImageSwiftUI */,
 			);
 			productName = Inventory_Management;
 			productReference = 891EC7132CF5ACFD00D65BEC /* Inventory_Management.app */;
@@ -94,6 +117,10 @@
 			);
 			mainGroup = 891EC70A2CF5ACFD00D65BEC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8917097F2D102BB800ED11FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				898139AA2D15637E00B1BF07 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 891EC7142CF5ACFD00D65BEC /* Products */;
 			projectDirPath = "";
@@ -255,7 +282,9 @@
 				DEVELOPMENT_TEAM = Q228F9C2DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InventoryManagement;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Access Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi membutuhkan akses lokasi untuk mendapatkan koordinat lokasi supplier.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -267,7 +296,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yohanesari.Inventory-Management";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yohanesari.InventoryBK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -286,7 +315,9 @@
 				DEVELOPMENT_TEAM = Q228F9C2DV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = InventoryManagement;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Access Camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aplikasi membutuhkan akses lokasi untuk mendapatkan koordinat lokasi supplier.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yohanesari.Inventory-Management";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yohanesari.InventoryBK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,6 +359,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8917097F2D102BB800ED11FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+		898139AA2D15637E00B1BF07 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		891709812D102C1200ED11FF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8917097F2D102BB800ED11FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		891709832D102C1200ED11FF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8917097F2D102BB800ED11FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		891709852D102C1200ED11FF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8917097F2D102BB800ED11FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		898139AB2D15637E00B1BF07 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 898139AA2D15637E00B1BF07 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 891EC70B2CF5ACFD00D65BEC /* Project object */;
 }
